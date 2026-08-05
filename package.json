@@ -1,0 +1,8 @@
+{
+  "name": "fastlesson-landing",
+  "private": true,
+  "scripts": {
+    "build": "node build-static.mjs",
+    "start": "python3 -m http.server 8080"
+  }
+}

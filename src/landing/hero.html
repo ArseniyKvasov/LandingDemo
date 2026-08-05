@@ -1,0 +1,107 @@
+<section class="fc-section fc-landing-hero">
+    <div class="fc-hero-live-layer" aria-hidden="true">
+        <div class="fc-hero-orbit"></div>
+        <span class="fc-hero-particle p1"></span>
+        <span class="fc-hero-particle p2"></span>
+        <span class="fc-hero-particle p3"></span>
+        <span class="fc-hero-particle p4"></span>
+        <span class="fc-hero-bubble-icon i1"><svg class="fc-icon" aria-hidden="true"><use href="{% static 'images/landing-icons.svg' %}#chat-dots-fill"></use></svg></span>
+        <span class="fc-hero-bubble-icon i2"><svg class="fc-icon" aria-hidden="true"><use href="{% static 'images/landing-icons.svg' %}#people-fill"></use></svg></span>
+        <span class="fc-hero-bubble-icon i3"><svg class="fc-icon" aria-hidden="true"><use href="{% static 'images/landing-icons.svg' %}#camera-video-fill"></use></svg></span>
+        <span class="fc-hero-bubble-icon i4"><svg class="fc-icon" aria-hidden="true"><use href="{% static 'images/landing-icons.svg' %}#mortarboard-fill"></use></svg></span>
+
+        <article class="fc-hero-float-card fc-hero-chat-card" data-depth="0.36">
+            <div class="fc-hero-card-head">
+                <span>Class chat</span>
+            </div>
+            <div class="fc-hero-msg">
+                <img class="fc-hero-avatar" src="{% static 'images/home/hero-tutor-photo-chat-96.webp' %}" alt="" width="96" height="96" decoding="async">
+                <div class="fc-hero-bubble">Hi! Ready to start the lesson?</div>
+            </div>
+            <div class="fc-hero-msg">
+                <img class="fc-hero-avatar" src="{% static 'images/home/hero-student-photo-chat-96.webp' %}" alt="" width="96" height="96" decoding="async">
+                <div class="fc-hero-bubble">Yes, joining the call now!</div>
+            </div>
+            <div class="fc-hero-chat-input">
+                <span>Type a message...</span>
+            </div>
+        </article>
+
+        <article class="fc-hero-float-card fc-hero-video-card" data-depth="0.6">
+            <div class="fc-hero-video-bg">
+                <picture class="fc-hero-video-media">
+                    <source type="image/webp"
+                            srcset="{% static 'images/home/hero-student-photo-640.webp' %} 640w, {% static 'images/home/hero-student-photo-768.webp' %} 768w, {% static 'images/home/hero-student-photo-1536.webp' %} 1536w"
+                            sizes="300px">
+                    <img src="{% static 'images/home/hero-student-photo.png' %}"
+                         width="1536" height="1024"
+                         alt=""
+                         fetchpriority="high"
+                         decoding="sync">
+                </picture>
+                <div class="fc-hero-controls">
+                    <span><svg class="fc-icon" aria-hidden="true"><use href="{% static 'images/landing-icons.svg' %}#mic-fill"></use></svg></span>
+                    <span><svg class="fc-icon" aria-hidden="true"><use href="{% static 'images/landing-icons.svg' %}#camera-video-fill"></use></svg></span>
+                    <span><svg class="fc-icon" aria-hidden="true"><use href="{% static 'images/landing-icons.svg' %}#display-fill"></use></svg></span>
+                    <span class="is-end"><svg class="fc-icon" aria-hidden="true"><use href="{% static 'images/landing-icons.svg' %}#telephone-x-fill"></use></svg></span>
+                </div>
+            </div>
+        </article>
+
+        <article class="fc-hero-float-card fc-hero-task-card" data-depth="0.56">
+            <div class="fc-hero-card-head">
+                <span>Reading a line graph</span>
+                <small class="fc-hero-task-subject">Math · Grade 5</small>
+            </div>
+            <div class="fc-hero-lesson-task">
+                <img class="fc-hero-graph-image"
+                     src="{% static 'images/home/hero-distance-graph-v2.webp' %}"
+                     alt="A line graph showing distance over time"
+                     width="1448"
+                     height="1086">
+                <div class="fc-hero-answer-row">What was the greatest distance?</div>
+                <div class="fc-hero-word-bank">
+                    <span>4 km</span>
+                    <span>5 km</span>
+                    <span>7 km</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="fc-hero-float-card fc-hero-progress-card" data-depth="0.32">
+            <div class="fc-hero-card-head fc-hero-progress-title">Class progress</div>
+            <div class="fc-hero-progress-left">
+                <div class="fc-hero-ring">78%</div>
+            </div>
+            <div class="fc-hero-progress-right">
+                <div class="fc-hero-bars">
+                    <div class="fc-hero-bar-item"><span class="fc-hero-bar" style="--h:82%"></span><em>A</em></div>
+                    <div class="fc-hero-bar-item"><span class="fc-hero-bar" style="--h:92%"></span><em>B</em></div>
+                    <div class="fc-hero-bar-item"><span class="fc-hero-bar" style="--h:68%"></span><em>C</em></div>
+                    <div class="fc-hero-bar-item"><span class="fc-hero-bar" style="--h:74%"></span><em>D</em></div>
+                    <div class="fc-hero-bar-item"><span class="fc-hero-bar" style="--h:54%"></span><em>E</em></div>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <div class="fc-landing-hero-copy">
+        <h1 class="fc-landing-hero-title">Everything you need to teach online</h1>
+        <p class="fc-landing-hero-text">
+            Ready-made activities, video calls, and a virtual whiteboard in one classroom
+        </p>
+        <div class="fc-landing-hero-actions">
+            <button type="button" class="fc-primary-btn js-open-invite-modal">
+                <svg class="fc-icon" aria-hidden="true"><use href="{% static 'images/landing-icons.svg' %}#lightning-charge-fill"></use></svg>
+                Explore lessons
+            </button>
+        </div>
+        <div class="fc-hero-mobile-features" aria-hidden="true">
+            <div class="fc-hero-mobile-feature is-video"><svg class="fc-icon" aria-hidden="true"><use href="{% static 'images/landing-icons.svg' %}#camera-video-fill"></use></svg><span>Video call</span></div>
+            <div class="fc-hero-mobile-feature is-chat"><svg class="fc-icon" aria-hidden="true"><use href="{% static 'images/landing-icons.svg' %}#chat-dots-fill"></use></svg><span>Chat</span></div>
+            <div class="fc-hero-mobile-feature is-board"><svg class="fc-icon" aria-hidden="true"><use href="{% static 'images/landing-icons.svg' %}#easel2-fill"></use></svg><span>Whiteboard</span></div>
+            <div class="fc-hero-mobile-feature is-task"><svg class="fc-icon" aria-hidden="true"><use href="{% static 'images/landing-icons.svg' %}#ui-checks-grid"></use></svg><span>Activities</span></div>
+            <div class="fc-hero-mobile-feature is-progress"><svg class="fc-icon" aria-hidden="true"><use href="{% static 'images/landing-icons.svg' %}#graph-up-arrow"></use></svg><span>Progress</span></div>
+        </div>
+    </div>
+</section>

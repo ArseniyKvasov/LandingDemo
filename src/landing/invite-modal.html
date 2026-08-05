@@ -1,0 +1,32 @@
+<div id="inviteModal" class="modal fade fc-invite-modal" tabindex="-1" aria-labelledby="inviteTitle" aria-label="Registration" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="inviteTitle" class="modal-title">Registration</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <div id="inviteFormView">
+                    <form id="inviteForm" class="fc-invite-form">
+                        <label for="inviteEmail">Email</label>
+                        <input id="inviteEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+                        <label for="invitePassword">Password</label>
+                        <input id="invitePassword" name="password" type="password" autocomplete="new-password" minlength="8" aria-describedby="invitePasswordHint" required>
+                        <small id="invitePasswordHint" class="fc-invite-hint">Minimum 8 characters</small>
+                        <button type="submit" class="fc-primary-btn fc-invite-submit" disabled>Request invitation</button>
+                    </form>
+                </div>
+
+                <div id="inviteSuccess" class="fc-invite-success" hidden>
+                    <div class="fc-invite-success-icon" aria-hidden="true">
+                        <svg class="fc-icon"><use href="{% static 'images/landing-icons.svg' %}#check-lg"></use></svg>
+                    </div>
+                    <h3 id="inviteSuccessTitle" class="fc-invite-success-title" tabindex="-1">You are on the list</h3>
+                    <p class="fc-invite-copy">We will send you an invitation email soon.</p>
+                    <button type="button" class="btn btn-success fc-invite-done" data-bs-dismiss="modal">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

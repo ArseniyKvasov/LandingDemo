@@ -1,0 +1,72 @@
+.fc-hero-task-card {
+    width: 236px;
+    padding: 14px;
+}
+
+.fc-hero-task-card .fc-hero-card-head {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 8px;
+    font-size: 0.86rem;
+}
+
+.fc-hero-task-subject {
+    color: var(--fc-color-palette-7d8fb3);
+    font-size: 0.62rem;
+    font-weight: 700;
+}
+
+.fc-hero-lesson-task {
+    margin-top: 0;
+    padding: 10px;
+    border-radius: 12px;
+    background: var(--fc-color-palette-f7faff);
+    color: var(--fc-color-palette-405274);
+    font-size: 0.68rem;
+    line-height: 1.35;
+}
+
+.fc-hero-options-label {
+    color: var(--fc-color-palette-667892);
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.fc-hero-graph-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    background: var(--fc-color-surface);
+}
+
+.fc-hero-answer-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 8px;
+    color: var(--fc-color-palette-405274);
+    font-size: 0.76rem;
+    font-weight: 800;
+}
+
+.fc-hero-options-label {
+    margin-bottom: 5px;
+}
+
+.fc-hero-task-card .fc-hero-word-bank {
+    gap: 5px;
+    margin-top: 0;
+}
+
+.fc-hero-task-card .fc-hero-word-bank span {
+    min-width: 28px;
+    padding: 3px 7px;
+    text-align: center;
+    font-size: 0.64rem;
+}

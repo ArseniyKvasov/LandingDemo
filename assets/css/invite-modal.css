@@ -1,0 +1,146 @@
+.fc-invite-modal .modal-dialog {
+    width: auto;
+    max-width: 420px;
+    margin: 1rem auto;
+}
+
+.fc-invite-modal .modal-content {
+    border: 1px solid var(--fc-color-border);
+    border-radius: 16px;
+    color: var(--fc-color-text);
+    background: var(--fc-color-surface);
+    box-shadow: 0 20px 48px rgba(var(--fc-color-shadow-strong-rgb), 0.2);
+}
+
+.fc-invite-modal .modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 0;
+    padding: 22px 24px 8px;
+}
+
+.fc-invite-modal .modal-title {
+    flex: 1 1 auto;
+    color: var(--fc-color-text);
+    font-size: 1.55rem;
+    line-height: 1.1;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.fc-invite-modal.fc-invite-modal-success .modal-title {
+    display: none;
+}
+
+.fc-invite-modal .btn-close {
+    flex: 0 0 auto;
+    margin: 0 0 0 auto;
+    padding: 8px;
+    opacity: 0.62;
+}
+
+.fc-invite-modal .modal-body {
+    padding: 8px 24px 24px;
+}
+
+.fc-invite-form {
+    display: grid;
+    gap: 7px;
+}
+
+.fc-invite-form label {
+    color: var(--fc-color-text);
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.fc-invite-form input {
+    width: 100%;
+    min-height: 46px;
+    margin-bottom: 7px;
+    border: 1px solid var(--fc-color-border);
+    border-radius: 10px;
+    padding: 0 13px;
+    color: var(--fc-color-text);
+    background: var(--fc-color-surface);
+    font: inherit;
+}
+
+.fc-invite-form input::placeholder {
+    color: var(--fc-color-text-muted);
+    opacity: 0.72;
+}
+
+.fc-invite-form input:focus {
+    border-color: var(--fc-color-primary);
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba(var(--fc-color-shadow-brand-rgb), 0.14);
+}
+
+.fc-invite-hint {
+    margin-top: -4px;
+    color: var(--fc-color-text-muted);
+    font-size: 0.8rem;
+}
+
+.fc-invite-submit {
+    width: 100%;
+    min-height: 48px;
+    justify-content: center;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.fc-invite-submit:disabled,
+.fc-invite-submit:disabled:hover,
+.fc-invite-submit:disabled:focus-visible {
+    border-color: var(--fc-color-palette-b6dfc3);
+    color: var(--fc-color-palette-80c89a);
+    background: var(--fc-color-palette-eefaf2);
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.72;
+    transform: none;
+}
+
+.fc-invite-success {
+    text-align: center;
+}
+
+.fc-invite-success-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    margin-bottom: 14px;
+    border-radius: 50%;
+    color: var(--fc-color-on-primary);
+    background: var(--fc-color-success);
+}
+
+.fc-invite-success-icon .fc-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.fc-invite-success-title {
+    margin: 0;
+    color: var(--fc-color-text);
+    font-size: 1.45rem;
+    font-weight: 800;
+}
+
+.fc-invite-copy {
+    margin: 10px 0 18px;
+    color: var(--fc-color-text-muted);
+    line-height: 1.5;
+}
+
+.fc-invite-done {
+    width: 100%;
+    min-height: 44px;
+    border-radius: 10px;
+}

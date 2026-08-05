@@ -1,0 +1,11 @@
+/* The landing uses borders and color contrast instead of elevation. */
+*,
+*::before,
+*::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+#lessonCsatModal .lesson-csat-star-icon {
+    filter: none;
+}
