@@ -119,7 +119,7 @@ const html = `<!doctype html>
     </footer>
 
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-    <script src="assets/js/landing-runtime.js?v=2" defer></script>
+    <script src="assets/js/landing-runtime.js?v=3" defer></script>
 </body>
 </html>
 `;
