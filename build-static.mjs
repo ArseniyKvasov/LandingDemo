@@ -5,6 +5,18 @@ import { fileURLToPath } from "node:url";
 const root = path.dirname(fileURLToPath(import.meta.url));
 const sourceRoot = path.join(root, "src", "landing");
 const sectionNames = ["hero", "compare", "examples", "features", "pricing", "cta", "preview-overlay", "invite-modal"];
+const assetVersion = "20260808-1";
+
+const cssBundles = [
+    {
+        output: path.join(root, "assets", "css", "landing-core.css"),
+        files: ["landing-bootstrap.css", "landing-shell.css"],
+    },
+    {
+        output: path.join(root, "assets", "css", "landing-extras.css"),
+        files: ["landing-nav.css", "invite-modal.css", "lesson-placeholders.css", "pricing.css", "no-shadows.css", "hero-formula.css"],
+    },
+];
 
 function resolveStaticTags(source) {
     return source
@@ -15,6 +27,13 @@ function resolveStaticTags(source) {
 
 const sections = await Promise.all(
     sectionNames.map(async (name) => resolveStaticTags(await readFile(path.join(sourceRoot, `${name}.html`), "utf8"))),
+);
+
+await Promise.all(
+    cssBundles.map(async ({ output, files }) => {
+        const css = await Promise.all(files.map((file) => readFile(path.join(root, "assets", "css", file), "utf8")));
+        await writeFile(output, `${css.join("\n")}\n`, "utf8");
+    }),
 );
 
 const html = `<!doctype html>
@@ -37,14 +56,14 @@ const html = `<!doctype html>
     <link rel="icon" href="assets/images/favicon/favicon.ico">
     <link rel="manifest" href="assets/images/favicon/site.webmanifest">
     <link rel="preload" href="assets/fonts/Montserrat-Landing-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="assets/css/landing-bootstrap.css">
-    <link rel="stylesheet" href="assets/css/landing-shell.css">
-    <link rel="stylesheet" href="assets/css/landing-nav.css">
-    <link rel="stylesheet" href="assets/css/invite-modal.css">
-    <link rel="stylesheet" href="assets/css/lesson-placeholders.css">
-    <link rel="stylesheet" href="assets/css/pricing.css">
-    <link rel="stylesheet" href="assets/css/no-shadows.css">
-    <link rel="stylesheet" href="assets/css/hero-formula.css?v=2">
+    <link rel="stylesheet" href="assets/css/landing-core.css?v=${assetVersion}">
+    <link rel="stylesheet" href="assets/css/landing-extras.css?v=${assetVersion}">
+    <style>
+        .fc-section:not(.fc-landing-hero) {
+            content-visibility: auto;
+            contain-intrinsic-size: 0 720px;
+        }
+    </style>
     <style>
         @font-face {
             font-family: "Montserrat Landing";
@@ -71,27 +90,12 @@ const html = `<!doctype html>
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KB8LFJ4C');</script>
     <!-- End Google Tag Manager -->
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111423285', 'ym');
-
-        ym(111423285, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-    </script>
-    <!-- /Yandex.Metrika counter -->
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KB8LFJ4C"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <!-- Yandex.Metrika counter (noscript) -->
-    <noscript><div><img src="https://mc.yandex.ru/watch/111423285" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter (noscript) -->
     <nav class="navbar app-navbar">
         <div class="container app-navbar-inner">
             <a class="navbar-brand app-brand" href="#top" aria-label="FastClass">
@@ -134,7 +138,7 @@ const html = `<!doctype html>
     </footer>
 
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-    <script src="assets/js/landing-runtime.js?v=3" defer></script>
+    <script src="assets/js/landing-runtime.js?v=${assetVersion}" defer></script>
 </body>
 </html>
 `;

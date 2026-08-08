@@ -29,16 +29,14 @@
 
         <article class="fc-hero-float-card fc-hero-video-card" data-depth="0.6">
             <div class="fc-hero-video-bg">
-                <picture class="fc-hero-video-media">
-                    <source type="image/webp"
-                            srcset="{% static 'images/home/hero-student-photo-640.webp' %} 640w, {% static 'images/home/hero-student-photo-768.webp' %} 768w, {% static 'images/home/hero-student-photo-1536.webp' %} 1536w"
-                            sizes="300px">
-                    <img src="{% static 'images/home/hero-student-photo.png' %}"
-                         width="1536" height="1024"
-                         alt=""
-                         fetchpriority="high"
-                         decoding="sync">
-                </picture>
+                <img class="fc-hero-video-media"
+                     src="{% static 'images/home/hero-student-photo-320.webp' %}"
+                     srcset="{% static 'images/home/hero-student-photo-320.webp' %} 320w, {% static 'images/home/hero-student-photo-640.webp' %} 640w, {% static 'images/home/hero-student-photo-768.webp' %} 768w, {% static 'images/home/hero-student-photo-1536.webp' %} 1536w"
+                     sizes="300px"
+                     width="1536" height="1024"
+                     alt=""
+                     fetchpriority="high"
+                     decoding="async">
                 <div class="fc-hero-controls">
                     <span><svg class="fc-icon" aria-hidden="true"><use href="{% static 'images/landing-icons.svg' %}#mic-fill"></use></svg></span>
                     <span><svg class="fc-icon" aria-hidden="true"><use href="{% static 'images/landing-icons.svg' %}#camera-video-fill"></use></svg></span>
@@ -55,10 +53,13 @@
             </div>
             <div class="fc-hero-lesson-task">
                 <img class="fc-hero-graph-image"
-                     src="{% static 'images/home/hero-distance-graph-v2.webp' %}"
+                     src="{% static 'images/home/hero-distance-graph-320.webp' %}"
+                     srcset="{% static 'images/home/hero-distance-graph-320.webp' %} 320w, {% static 'images/home/hero-distance-graph-480.webp' %} 480w, {% static 'images/home/hero-distance-graph-768.webp' %} 768w, {% static 'images/home/hero-distance-graph-v2.webp' %} 1448w"
+                     sizes="(min-width: 992px) 190px, 220px"
                      alt="A line graph showing distance over time"
                      width="1448"
-                     height="1086">
+                     height="1086"
+                     decoding="async">
                 <div class="fc-hero-answer-row">What was the greatest distance?</div>
                 <div class="fc-hero-word-bank">
                     <span>4 km</span>
