@@ -13,7 +13,7 @@
         setLandingNavOpen(!landingNav?.classList.contains("is-open"));
     });
 
-    landingNav?.querySelectorAll("a").forEach((link) => {
+    landingNav?.querySelectorAll("a, button").forEach((link) => {
         link.addEventListener("click", () => setLandingNavOpen(false));
     });
 

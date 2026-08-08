@@ -25,13 +25,13 @@ const html = `<!doctype html>
     <meta name="google" content="notranslate">
     <meta http-equiv="Content-Language" content="en">
     <title>FastClass - a platform for English teachers</title>
-    <meta name="description" content="FastClass is a teaching platform for English tutors with ready-made interactive lessons and a virtual classroom.">
+    <meta name="description" content="FastClass brings ready-made activities, video calls, and a virtual whiteboard into one classroom for tutors and schools.">
     <link rel="canonical" href="/">
     <meta property="og:site_name" content="FastClass">
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
     <meta property="og:title" content="FastClass - a platform for English teachers">
-    <meta property="og:description" content="Ready-made activities, video calls, and a virtual whiteboard in one classroom.">
+    <meta property="og:description" content="Ready-made activities, video calls, and a virtual whiteboard in one classroom for tutors and schools.">
     <meta property="og:url" content="/">
     <meta property="og:image" content="assets/images/favicon/android-chrome-512x512.png">
     <link rel="icon" href="assets/images/favicon/favicon.ico">
@@ -64,8 +64,19 @@ const html = `<!doctype html>
       "description": "A platform for creating and teaching interactive lessons online."
     }
     </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KB8LFJ4C');</script>
+    <!-- End Google Tag Manager -->
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KB8LFJ4C"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <nav class="navbar app-navbar">
         <div class="container app-navbar-inner">
             <a class="navbar-brand app-brand" href="#top" aria-label="FastClass">
@@ -78,6 +89,7 @@ const html = `<!doctype html>
                     <a href="#examples">Lessons</a>
                     <a href="#features">Features</a>
                     <a href="#pricing">Pricing</a>
+                    <button type="button" class="fc-landing-nav-cta js-open-invite-modal">Get Started</button>
                 </nav>
 
                 <button
