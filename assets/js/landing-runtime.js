@@ -4,6 +4,12 @@
         window.dataLayer.push({ event: eventName, ...payload });
     };
 
+    const reachYandexGoal = (goalName) => {
+        if (typeof window.ym === "function") {
+            window.ym(111423285, "reachGoal", goalName);
+        }
+    };
+
     const landingNav = document.getElementById("landingNav");
     const landingNavToggle = document.getElementById("landingNavToggle");
 
@@ -149,6 +155,7 @@
             method: "email_password",
             registration_status: "invitation_requested",
         });
+        reachYandexGoal("sign_up");
         inviteForm.hidden = true;
         if (inviteSuccess) inviteSuccess.hidden = false;
         if (inviteTitle) inviteTitle.hidden = true;
