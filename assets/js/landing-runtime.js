@@ -1,4 +1,9 @@
 (() => {
+    const pushDataLayerEvent = (eventName, payload = {}) => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: eventName, ...payload });
+    };
+
     const landingNav = document.getElementById("landingNav");
     const landingNavToggle = document.getElementById("landingNavToggle");
 
@@ -140,6 +145,10 @@
             updateInviteSubmitState();
             return;
         }
+        pushDataLayerEvent("sign_up", {
+            method: "email_password",
+            registration_status: "invitation_requested",
+        });
         inviteForm.hidden = true;
         if (inviteSuccess) inviteSuccess.hidden = false;
         if (inviteTitle) inviteTitle.hidden = true;
